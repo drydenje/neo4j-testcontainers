@@ -1,0 +1,23 @@
+{
+  "name": "neo4j-testcontainers-example",
+  "version": "1.0.0",
+  "description": "Neo4j testing with Testcontainers",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:integration": "jest tests/integration",
+    "test:unit": "jest tests/unit"
+  },
+  "dependencies": {
+    "neo4j-driver": "^5.15.0"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "testcontainers": "^10.2.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
