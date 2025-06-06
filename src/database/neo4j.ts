@@ -1,5 +1,5 @@
 // src/database/neo4j.ts
-import neo4j, { Driver, Session, auth } from "neo4j-driver";
+import neo4j, { Driver, ServerInfo, Session, auth } from "neo4j-driver";
 import { Neo4jConnection, SessionOperation, WithSessionFn } from "../types";
 
 export const createConnection = (
@@ -12,7 +12,7 @@ export const createConnection = (
   return {
     getSession: (): Session => driver.session(),
     close: (): Promise<void> => driver.close(),
-    verifyConnectivity: (): Promise<void> => driver.verifyConnectivity(),
+    verifyConnectivity: (): Promise<ServerInfo> => driver.verifyConnectivity(),
     driver,
   };
 };

@@ -1,5 +1,5 @@
 // src/types/index.ts
-import { Driver, Session, Result } from "neo4j-driver";
+import { Driver, Session, Result, ServerInfo } from "neo4j-driver";
 import { StartedTestContainer } from "testcontainers";
 
 // User domain types
@@ -27,7 +27,7 @@ export interface UserStats {
 export interface Neo4jConnection {
   readonly getSession: () => Session;
   readonly close: () => Promise<void>;
-  readonly verifyConnectivity: () => Promise<void>;
+  readonly verifyConnectivity: () => Promise<ServerInfo>;
   readonly driver: Driver;
 }
 

@@ -24,11 +24,11 @@
     "paths": {
       "@/*": ["src/*"],
       "@/tests/*": ["src/tests/*"]
-    },
+    }
   },
   "ts-node": {
     "require": ["tsconfig-paths/register"]
   },
   "include": ["src/**/*", "src/tests"],
-  "exclude": ["node_modules", "dist", "src/testss
+  "exclude": ["node_modules", "dist", "src/tests"]
 }
