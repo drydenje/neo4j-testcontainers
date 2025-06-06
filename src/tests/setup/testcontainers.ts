@@ -1,11 +1,11 @@
 // tests/setup/testcontainers.ts
 import { GenericContainer, Wait, StartedTestContainer } from "testcontainers";
-import { createConnection } from "../../database/neo4j";
+import { createConnection } from "@/database/neo4j";
 import {
   Neo4jConnection,
   TestEnvironment,
   TestContainerFunction,
-} from "../../types";
+} from "@/types";
 
 export const createTestContainer = async (): Promise<TestEnvironment> => {
   const container: StartedTestContainer = await new GenericContainer(

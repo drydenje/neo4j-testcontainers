@@ -2,14 +2,9 @@
 import {
   setupSharedContainer,
   teardownSharedContainer,
-} from "../setup/testcontainers";
-import { createUserRepository } from "../../src/repositories/userRepository";
-import {
-  TestEnvironment,
-  UserRepository,
-  CreateUserData,
-  User,
-} from "../../types";
+} from "@/tests/setup/testcontainers";
+import { createUserRepository } from "@/repositories/userRepository";
+import { TestEnvironment, UserRepository, CreateUserData, User } from "@/types";
 
 describe("UserRepository Integration Tests", () => {
   let testEnv: TestEnvironment;

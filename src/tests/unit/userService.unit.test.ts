@@ -1,5 +1,5 @@
 // tests/unit/userService.unit.test.ts
-import { createUserService } from '../../services/userService';
+import { createUserService } from '@/services/userService';
 import { 
   UserRepository, 
   UserService, 
@@ -9,7 +9,7 @@ import {
   ValidationError,
   UserNotFoundError,
   UserAlreadyExistsError
-} from '../../types';
+} from '@/types';
 
 // Mock type for UserRepository
 type MockUserRepository = jest.Mocked<UserRepository>;
