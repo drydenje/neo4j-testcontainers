@@ -1,9 +1,12 @@
 import "module-alias/register";
 // import { User } from "@/types/index.ts";
-import { check } from "@types/check";
+import { check } from "@/types/check";
+// import { check } from "./types/check";
+import { checkUnit } from "@/tests/unit/checkUnit";
 // import { check } from "@/tests/unit/check";
 
 console.log("CHECK:", check());
+console.log("CHECK UNIT:", checkUnit());
 
 // const u: User = {
 //   name: "John Doe",

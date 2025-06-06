@@ -34,9 +34,6 @@
     "node": ">=18.0.0"
   },
   "_moduleAliases": {
-    "@": "./dist",
-    "@src": "src",
-    "@tests": "tests",
-    "@utils": "src/utils"
+    "@": "src"
   }
 }
