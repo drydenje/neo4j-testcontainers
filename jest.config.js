@@ -1,17 +1,23 @@
 // jest.config.js
 module.exports = {
+  preset: "ts-jest",
   testEnvironment: "node",
   roots: ["<rootDir>/src", "<rootDir>/tests"],
-  testMatch: ["**/__tests__/**/*.js", "**/?(*.)+(spec|test).js"],
+  testMatch: ["**/__tests__/**/*.ts", "**/?(*.)+(spec|test).ts"],
+  transform: {
+    "^.+\\.ts$": "ts-jest",
+  },
   collectCoverageFrom: [
-    "src/**/*.js",
-    "!src/**/*.spec.js",
-    "!src/**/*.test.js",
+    "src/**/*.ts",
+    "!src/**/*.spec.ts",
+    "!src/**/*.test.ts",
+    "!src/types/**/*.ts",
   ],
   coverageDirectory: "coverage",
   coverageReporters: ["text", "lcov", "html"],
-  setupFilesAfterEnv: ["<rootDir>/tests/setup/jest.setup.js"],
-  testTimeout: 60000, // Increased for container operations
-  maxWorkers: 1, // Run tests serially to avoid port conflicts
+  setupFilesAfterEnv: ["<rootDir>/tests/setup/jest.setup.ts"],
+  testTimeout: 60000,
+  maxWorkers: 1,
   verbose: true,
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
 };
